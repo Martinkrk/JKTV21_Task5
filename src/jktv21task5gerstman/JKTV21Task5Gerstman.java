@@ -21,6 +21,7 @@ public class JKTV21Task5Gerstman {
         // TODO code application logic here
         Random rnd = new Random();
         int[][] jagged = new int[5][];
+        int[] all = new int[32];
         
         jagged[0] = new int[3];
         jagged[1] = new int[5];
@@ -35,8 +36,26 @@ public class JKTV21Task5Gerstman {
                 System.out.printf(jagged[i][j] + " ");
             }    
             System.out.println();
-            Arrays.sort(jagged[i]);
         }
+        int counter = 0;
+        
+        for(int i = 0; i < jagged.length; i++){
+            for(int j = 0; j < jagged[i].length; j++){
+                all[counter] = jagged[i][j];
+                counter++;
+            }
+        }
+        
+        Arrays.sort(all);
+        counter = 0;
+        
+        for(int i = 0; i < jagged.length; i++){
+            for(int j = 0; j < jagged[i].length; j++){
+                jagged[i][j] = all[counter];
+                counter++;
+            }
+        }
+        
         System.out.println("\nSorted: ");
         for(int i = 0; i < jagged.length; i++){
             for(int j = 0; j < jagged[i].length; j++){
