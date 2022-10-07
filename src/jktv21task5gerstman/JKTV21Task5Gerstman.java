@@ -54,7 +54,7 @@ public class JKTV21Task5Gerstman {
         int subArrN;
         int eP, eN;
 
-        for(int i = 0; i < sum*sum - 1; i++){
+        for(int i = 0; i < sum - 1; i++){
             subArrN = jagged[0].length - 1;
             for(int j = 0; j < sum - 1; j++){
                 eP = jagged[counter][j];
